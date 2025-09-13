@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="0"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/shashirajraja/shopping-cart.git"/>
+		<item value="file:///C:\Users\shris\Downloads\shopping-cart-master"/>
+		<item value="file://C:\Users\shris\git\shopping-cart.git"/>
+		<item value="file://C:\Program Files\Git"/>
+		<item value="file://C:\Users\shris\git\Shopping-cartt"/>
+		<item value="file://C:\Users\shris\git\shopping-cart"/>
+		<item value="file://C:\Users\shris\Downloads\shopping-cart-master"/>
+		<item value="file://C:\Users\shris\OneDrive\Documents\ide\shopping-cartt"/>
+		<item value="file://C:\Users\shris\git\shopping-cart-master"/>
+		<item value="https://github.com/shashirajraja/shopping-cart"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<section name="GitImportWizard">
+		<item key="GitProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+</section>

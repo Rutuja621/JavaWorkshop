@@ -1,0 +1,28 @@
+package wrapper.com;
+
+public class WrapperDemo {
+	public static void main(String[] args) {
+		int a=10;
+		//here conversion of int to Interger  and called as auto boxing
+		//primitive to wrapper coversion is calles autoboxing
+		Integer ab=10;
+		      //  wrapper
+/*		int --->Integer
+ *      float --->Float
+ *      boolean --->Boolean
+ *      char ---->Character
+ * 
+ */
+		
+		Integer e=100;
+		int f=e;//conversion of wrapper class to primitive called unboxing
+		
+		
+		
+		int abc=1002;//primitive
+		String num=Integer.toString(abc);//conversion of primitive to wrapper and then to string
+		String opq=String.valueOf(abc);//conversion of primitive to string
+		
+	}
+
+}

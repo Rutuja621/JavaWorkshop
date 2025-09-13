@@ -1,0 +1,16 @@
+package StringDeclare;
+
+public class Stringfunctions {
+	
+	public static void main(String[] args) {
+		//concat
+		String a="Rutuja";
+		System.out.println(a+" Misal");
+		System.out.println(a);
+		
+		
+		String name="Rutuja";
+		System.out.println(name.charAt(2));
+	}
+
+}

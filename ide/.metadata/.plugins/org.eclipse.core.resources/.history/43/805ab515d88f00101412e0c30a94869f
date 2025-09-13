@@ -1,0 +1,9 @@
+package function;
+
+public class Multiplication2 {
+	public static void main(String[] args) {
+		multiplicationfunc mul=new multiplicationfunc();
+		mul.getMultiplicationTable();
+	}
+
+}

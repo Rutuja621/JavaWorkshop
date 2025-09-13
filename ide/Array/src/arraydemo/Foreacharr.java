@@ -1,0 +1,30 @@
+package arraydemo;
+
+public class Foreacharr {
+	public static void main(String[] args) {
+		int salaries[]=new int[6];
+		salaries[0]=100000;
+		salaries[1]=107000;
+		salaries[2]=1560000;
+		salaries[3]=100900;
+		salaries[4]=100000;
+		salaries[5]=110000;
+		
+		
+		System.out.println(salaries[3]);
+		
+		
+		//for loop
+//		for(int i=0;i<salaries.length;i++) {
+//			System.out.println(salaries[i]);
+//		}
+		
+		
+		//for each
+		
+		for(int salary:salaries) {
+			System.out.println(salary);
+		}
+	}
+
+}

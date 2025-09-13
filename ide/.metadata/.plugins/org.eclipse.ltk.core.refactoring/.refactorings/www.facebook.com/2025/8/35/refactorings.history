@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;www.facebook.com&apos;&#x0D;&#x0A;- Original project: &apos;www.facebook.com&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     scannerclass.employee.java&#x0D;&#x0A;     scannerclass.getsetData.java&#x0D;&#x0A;     scannerclass.MainApp.java&#x0D;&#x0A;     scannerclass.scannerdemo.java" description="Delete elements" element1="/src&lt;scannerclass{scannerdemo.java" element2="/src&lt;scannerclass{employee.java" element3="/src&lt;scannerclass{MainApp.java" element4="/src&lt;scannerclass{getsetData.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1756397635253" subPackages="false" version="1.0"/>
+</session>

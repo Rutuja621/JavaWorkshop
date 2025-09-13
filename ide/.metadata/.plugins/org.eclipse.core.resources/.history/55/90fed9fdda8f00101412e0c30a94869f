@@ -1,0 +1,26 @@
+package constructor;
+
+public class Constructordemo {
+	//constructor is an special method which is invoked at the object creation
+	// called only once at object creation
+	//memory is allocated when constructor is called
+    Constructordemo() {//constructor don't have return type
+		System.out.println("Inside constructor");
+	}
+    //nonstatic block
+    {
+    	System.out.println("Non static");
+    }
+    //static block
+    static {
+    	System.out.println("Inside static");
+    }
+	
+	public static void main(String[] args) {
+		Constructordemo obj=new Constructordemo();
+		System.out.println("Inside main");
+		System.out.println("********");
+		Constructordemo obj1=new Constructordemo();
+	}
+
+}

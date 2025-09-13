@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\Users\shris\OneDrive\Documents\ide\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3841129941.index
+\shopping-cart\src
+C:\Users\shris\OneDrive\Documents\ide\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3462190054.index
+\shopping-cartt\src
+C:\Users\shris\OneDrive\Documents\ide\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1721504518.index
+\shopping-cart1\src
+C:\Users\shris\OneDrive\Documents\ide\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2854501750.index
+\shopping-cartt\src

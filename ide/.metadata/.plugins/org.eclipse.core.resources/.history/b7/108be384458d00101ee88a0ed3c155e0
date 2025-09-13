@@ -1,0 +1,27 @@
+package arraydemo;
+import java.util.Scanner;
+public class Example5 {
+	//limit of an array is given 
+	public static int [] getSum(int [] a) {
+		int sum=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		sc.nextInt();
+		for(int i=0;i<a.length;i++) {
+		sum=+i;
+		i++;
+		System.out.println(sum);
+		
+		
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		int a[]=new int[5];
+		int [] summ=Example5.getSum(a);
+        
+        
+	}
+
+}

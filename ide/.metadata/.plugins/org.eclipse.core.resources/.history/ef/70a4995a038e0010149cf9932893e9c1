@@ -1,0 +1,48 @@
+package StringDeclare;
+
+public class Stringfunctions {
+	
+	public static void main(String[] args) {
+		//concat
+		String a="Rutuja";
+		System.out.println(a+" Misal");
+		System.out.println(a);
+		
+		
+		String name="Rutuja";
+		//charAt prints character at index 2
+		System.out.println("CharAt: "+name.charAt(2));
+		
+		//indexOf prints index of particular character
+		System.out.println(name.indexOf("indexOf: "+'t'));
+		
+		//checks if or compares the string into specified object
+		System.out.println("Equals: "+name.equals(name));
+		
+		System.out.println("Substring: "+name.substring(3));
+		
+		System.out.println("Substring (start and end elements are printed by given limit): "+name.substring(0, 2));
+		
+		System.out.println("LowerCase: "+name.toLowerCase());
+		
+		System.out.println("uppercase: "+name.toUpperCase());
+		
+		System.out.println("Replace: "+name.replace("a", "K"));
+		
+		//removes a whitespaces
+		System.out.println("Trim: "+name.trim());
+		
+		System.out.println("Split: "+name.split(name));
+		
+		//returns the unicode of the char at the specified index
+		//you can use like codePointBefore,codePointCount
+		System.out.println("codePointAt: "+name.codePointAt(0));
+		
+		
+		//comapres if name string is equal to a string
+		System.out.println("ComapreTO: "+name.compareTo(a));
+		
+		
+	}
+
+}

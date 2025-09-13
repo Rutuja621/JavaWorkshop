@@ -1,0 +1,16 @@
+package wrapper.com;
+
+public class WrapperDemo {
+	public static void main(String[] args) {
+		int a=10;
+		Integer ab=10;
+		
+/*		int --->Integer
+ *      float --->Float
+ *      boolean --->Boolean
+ *      char ---->Character
+ * 
+ */
+	}
+
+}

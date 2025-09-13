@@ -1,0 +1,21 @@
+package wrapper.com;
+
+public class WrapperDemo {
+	public static void main(String[] args) {
+		int a=10;
+		//here conversion of int to Interger  and called as auto boxing
+		
+		Integer ab=10;
+		      //  wrapper
+/*		int --->Integer
+ *      float --->Float
+ *      boolean --->Boolean
+ *      char ---->Character
+ * 
+ */
+		
+		Integer e=100;
+		int f=e;
+	}
+
+}

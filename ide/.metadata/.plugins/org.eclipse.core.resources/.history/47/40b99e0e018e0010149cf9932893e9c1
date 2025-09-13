@@ -1,0 +1,23 @@
+package StringDeclare;
+
+public class Stringfunctions {
+	
+	public static void main(String[] args) {
+		//concat
+		String a="Rutuja";
+		System.out.println(a+" Misal");
+		System.out.println(a);
+		
+		
+		String name="Rutuja";
+		//charAt prints character at index 2
+		System.out.println("CharAt: "+name.charAt(2));
+		
+		//indexOf prints index of particular character
+		System.out.println(name.indexOf("indexOf: "+'t'));
+		
+		
+		System.out.println(name.equals(name));
+	}
+
+}

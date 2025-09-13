@@ -1,0 +1,16 @@
+package arraydemo;
+
+public class Example {
+	public static int findRollNumber(int[] rolls,int rollNo) {
+//		for(int i=0;i<rolls.length;i++) {
+//			System.out.println(rolls[i]);
+//		}
+		return rollNo;
+	}
+	public static void main(String[] args) {
+		int rolls[]={10,4,6,3,19};
+		System.out.println(Example.findRollNumber(rolls,9));
+		
+	}
+
+}

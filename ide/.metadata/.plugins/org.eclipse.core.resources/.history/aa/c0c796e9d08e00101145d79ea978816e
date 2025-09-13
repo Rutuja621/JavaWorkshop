@@ -1,0 +1,46 @@
+package StringDeclare;
+
+public class Replacestr {
+	//return the output as : bcdefa
+	public static String changeSequence(String a) {
+		for(int i=0;i<a.length();i++) {
+			return a.substring(1)+a.charAt(0);
+		}
+		return a;
+	}
+	
+	//return output as  -- 'fl'
+	public static String[] longestString(String [] arr) {
+		for(int i=0;i<arr.length-3;i++) {
+			 
+			 System.out.println(arr[i].substring(0, 2));
+		}
+		return null;
+	}
+	
+	
+	//
+	public static int subStringIndex(String b,String d) {
+		
+		b.toString().contains(d);
+	    System.out.println(b.indexOf(d));
+		return 0;
+	}
+	
+	
+	
+
+	
+	public static void main(String[] args) {
+		String a="abcdef";
+		System.out.println(Replacestr.changeSequence(a));
+		
+		String[] ab= {"flower","fly","flow","flight"};
+		System.out.println(Replacestr.longestString(ab));
+		
+		String b="cricket";
+		String d="ket";
+		System.out.println(Replacestr.subStringIndex(b, d));
+	}
+
+}
