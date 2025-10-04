@@ -1,0 +1,43 @@
+package CustomerService;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+import Customer.Customer;
+import Customer.CustomerOperations;
+
+public class Services {
+	
+	Scanner sc=new Scanner(System.in);
+	public void makeBill() {
+		 System.out.println("Enter Customer Id to view details:");
+	        int custId = sc.nextInt();
+	
+	        List<Customer> allCustomer=CustomerOperations.allCustomer;
+	        Iterator<Customer> itr=allCustomer.iterator();
+	        int totalQuantity = 0;
+	        boolean foundCustomer = false;
+
+	        while (itr.hasNext()) {
+	            Customer customer = itr.next();
+	            if (customer.getCust_Id() == custId) {
+	                try {
+	                    totalQuantity += Integer.parseInt(customer.getQuantity());
+	                    foundCustomer = true;
+	                } catch (NumberFormatException e) {
+	                    System.out.println("Warning: Quantity for customer " + custId + " is not a valid number: " + customer.getQuantity());
+	                }
+	            }
+	        }
+
+	        if (foundCustomer) {
+	            System.out.println("Total quantity of products for Customer ID " + custId + ": " + totalQuantity);
+	        } else {
+	            System.out.println("Customer with ID " + custId + " not found.");
+	        }
+	    }
+	
+	
+	}
+

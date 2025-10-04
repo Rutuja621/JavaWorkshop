@@ -1,0 +1,106 @@
+package ShoppingDemo;
+
+import java.time.LocalDate;
+
+public class Shopping {
+	
+	
+	
+	public Shopping(int productID, String name, double price, String description, int stock, LocalDate registeredDate,
+			LocalDate expiryDate, String barcodeNo) {
+		super();
+		this.productID = productID;
+		this.name = name;
+		this.price = price;
+		this.description = description;
+		this.stock = stock;
+		this.registeredDate = registeredDate;
+		this.expiryDate = expiryDate;
+		this.barcodeNo = barcodeNo;
+	}
+	public Shopping() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	private int productID;
+	private String name;
+	private double price;
+	private String description;
+	private int stock;
+	private LocalDate registeredDate;
+	private LocalDate expiryDate;
+	private String barcodeNo;
+	
+	public int getProductID() {
+		return productID;
+	}
+	public void setProductID(int productID) {
+		this.productID = productID;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+	public LocalDate getRegisteredDate() {
+		return registeredDate;
+	}
+	
+	public void setRegisteredDate(int i) {
+		this.registeredDate = i;
+	}
+	
+	public LocalDate getExpiryDate() {
+		return expiryDate;
+	}
+	
+	public void setExpiryDate(int i) {
+		this.expiryDate = i;
+	}
+	
+	
+	
+
+	public String getBarcodeNo() {
+		return barcodeNo;
+	}
+
+
+	public void setBarcodeNo(String barcodeNo) {
+		this.barcodeNo = barcodeNo;
+	}
+	@Override
+	public String toString() {
+		return "Shopping [productID=" + productID + ", name=" + name + ", price=" + price + ", description="
+				+ description + ", stock=" + stock + ", registeredDate=" + registeredDate + ", expiryDate=" + expiryDate
+				+ ", barcodeNo=" + barcodeNo + "]";
+	}
+	
+
+}

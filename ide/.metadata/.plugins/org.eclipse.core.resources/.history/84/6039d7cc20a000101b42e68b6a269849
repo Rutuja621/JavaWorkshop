@@ -1,0 +1,39 @@
+package CustomerService;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+import Customer.Customer;
+import Customer.CustomerOperations;
+
+public class Services {
+	
+	Scanner sc=new Scanner(System.in);
+	public void makeBill() {
+		 System.out.println("Enter Customer Id to view details:");
+	        int custId = sc.nextInt();
+	        
+	
+	        List<Customer> allCustomer=CustomerOperations.allCustomer;
+	        Iterator<Customer> itr=allCustomer.iterator();
+	        boolean foundCustomer = false;
+	        while(itr.hasNext()) {
+	        	Customer customer=itr.next();
+	        	if(customer.getCust_Id()==custId) {
+	        		System.out.println(customer);
+	        		foundCustomer=true;
+	        	}
+	        }
+
+	        if (!foundCustomer) {
+//	            System.out.println("Customer Details:");
+//	            System.out.println(foundCustomer); // Assuming Customer class has a meaningful toString()
+	        	
+	        	System.out.println("Not found");
+	        } 
+	    }
+	
+	
+	}
+

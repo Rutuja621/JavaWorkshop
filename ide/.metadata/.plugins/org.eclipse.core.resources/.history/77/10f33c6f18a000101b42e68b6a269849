@@ -1,0 +1,12 @@
+package Customer;
+
+public class Customer {
+	
+	private int Cust_Id;
+	private String name;
+	private String address;
+	
+	
+	
+
+}

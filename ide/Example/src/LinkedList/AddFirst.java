@@ -1,0 +1,197 @@
+package LinkedList;
+
+public class AddFirst {
+	
+	public static class Node{
+		int data;//data of currentElement
+		Node next;//reference of an next element
+		
+		public Node(int data) {
+			this.data=data;//this will point to data of newNode
+			this.next=null;//this next will point null of the newNode
+		}
+		
+	}
+	
+	public static Node head;//start
+	public static Node tail;//end element of the linked list
+	public static int size;
+	
+	
+	public void addFirst(int data) {
+		
+		//Step 1: Create new node
+		Node newNode=new Node(data);
+		//when node is created size will be incremented
+		size++;
+		if(head==null) {//if the list is empty then this point newNode is head it is also a tail node
+			head=tail=newNode;
+			return;
+			
+		}
+		//step 2: newNodes next points to old head element
+		newNode.next=head;//linking of one node to another
+		
+		//step 3 : newNode points to head
+		head=newNode;
+		
+		
+		
+	}
+	
+	public void addLast(int data) {
+		//when addLast is called empty space is created at last 
+		Node newNode=new Node(data);//after that new node  is created
+		size++;
+		if(head==null) {//if there is no element is list so the newNode becomes head node and tail node
+			head=tail=newNode;//this will make newNode as both head and tail
+			return;//newNode is printed
+		}
+		tail.next=newNode; //if in list there is node then
+		//tail.next points to null value because there is no data so 
+		//this statement becomes tail.next as newNode 
+		 
+		tail=newNode;//in this statement now newNode is assigned to a tail
+	}
+	
+	//idx is an index which we have insert data 
+	public void addMid(int idx,int data) {
+		
+		//to add elements to head
+		if(idx==0) {
+			addFirst(data);
+			return;
+		}
+		Node newNode=new Node(data);
+		size++;
+		Node temp=head;//head data is stored in temp
+		int i=0;//it tracks a temp in which index temp  is present
+		
+		while(i<idx-1) {
+			/*
+			 * The loop runs as long as i is less than idx-1, which is 2-1 = 1.
+               i = 0: i < 1 is true. temp becomes temp.next (node B). i increments to 1.
+               i = 1: i < 1 is false. The loop terminates.
+			 */
+			temp=temp.next;//In each iteration, temp is updated to point to the next node in the list.
+			i++;
+		}
+		//when i=idx-1 (temp-> prev)then it will assign temp.next to temp 
+		newNode.next=temp.next;
+		temp.next=newNode;
+	}
+	
+	
+	//this function is used to print the list
+	public void printList() {//time complexity O(n) (linear time complexity) beacause it visits each node in the list
+		
+        if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
+        //in this statement head data  is point(stored) in temp so this store head data to temp
+        Node temp = head;
+        
+        //if temp node is not null then data which stored in temp is printed 
+        //temp is empty data which point to head node beacaus we don't want to  cha
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            //every time temp data is printed and the temp.next is become a temp 
+            temp = temp.next;
+            //this temp can move from first to last 
+            
+        }
+        System.out.println("null");
+    }//the head and tail we can't change beacause this are static (value can't change value)
+	
+	
+	
+	//remove first
+	
+	public int removeFirst() {
+		
+		if(size==0) {//no need to inform size is already zero
+			System.out.println("List is empty");
+			return Integer.MIN_VALUE;
+		}else if(size==1) {
+			//if list exist only one element and we want to delete it take variable val store head data in it 
+			
+			int val=head.data;
+			//assign head and tail as a null so it will remove the first element
+			size=0;//if only one element is in the list it is necessary to inform to list that there is no element in list make size as 0
+			head=tail=null;
+		}
+		
+		
+		int val=head.data;//val variable is created it point to the head node's data
+		head=head.next;//head.next is assigned as head node 
+		//by this statement list always print from head node which is next of an head node(prev head node) and it works as a singly linked list which traverse from one side
+		//so the first element will not printed and it not in use so  garbage collector will remove the first element
+		
+		size--;//when one node is removed then it change the size of the list 
+		return val; //val of the head is returned val stores data of head node
+		
+	}
+	
+	public int removeLast() {
+		if(size==0) {
+			System.out.println("List is empty");
+			return Integer.MIN_VALUE;
+			
+		}else if(size ==1) {
+			int val=head.data;
+			size=0;
+			head=tail=null;
+			return val;
+		}
+		
+		Node prev=head;
+		
+		//this loop stops at second last element 
+		for(int i=0;i<size-2;i++) {
+			prev=prev.next;
+		}
+		
+		//stored data which we want to delete  prev(next)it is an second last element it means tail .data is tail's data
+		int val=prev.next.data;
+		
+		//in this second last element's next is assigned to null
+		prev.next=null;
+		//and tail is assigned second last element
+		tail=prev;
+		size--;
+		return val;
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		AddFirst af=new AddFirst();
+		af.addFirst(2);
+		af.printList();
+		
+		af.addFirst(3);
+		af.printList();
+		
+		af.addLast(6);
+		af.printList();
+		
+		af.addLast(4);
+		af.printList();
+		
+		af.addLast(5);
+		af.printList();
+		
+		af.addMid(2, 8);
+		af.printList();
+		
+		System.out.println(af.size);
+		
+		af.removeFirst();
+		af.printList();
+		
+		af.removeLast();
+		af.printList();
+	}
+}

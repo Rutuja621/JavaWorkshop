@@ -2,12 +2,12 @@ package encapsulation.Student;
 
 public class Student {
 	int rollNo=111;
-	String name="Ashish";
+	String name="Rutuja";
 	
 	public static void main(String[] args) {
 		Student st=new Student();
 		st.rollNo=111;
-		st.name="Ashish";
+		st.name="Rutuja";
 		
 		
 		Student st1=new Student();

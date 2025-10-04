@@ -1,0 +1,57 @@
+package LinkedList;
+
+public class AddFirst {
+	
+	public static class Node{
+		int data;//data of currentElement
+		Node next;//reference of an next element
+		
+		public Node(int data) {
+			this.data=data;//this will point to data of newNode
+			this.next=null;//this next will point null of the newNode
+		}
+		
+	}
+	
+	public static Node head;//start
+	public static Node tail;//end element of the linked list
+	
+	
+	public void addFirst(int data) {
+		
+		//Step 1: Create new node
+		Node newNode=new Node(data);
+		if(head==null) {//if the list is empty then this point newNode is head it is also a tail node
+			head=tail=newNode;
+			return;
+			
+		}
+		//step 2: newNodes next points to old head element
+		newNode.next=head;//linking of one node to another
+		
+		//step 3 : newNode points to head
+		head=newNode;
+		
+		
+		
+	}
+	
+	public void addLast(int data) {
+		Node newNode=new Node(data);
+		if(tail==null) {
+			head=tail=newNode;
+		}
+		newNode.next=tail;
+		
+		tail=newNode;
+	}
+	
+	public static void main(String[] args) {
+		AddFirst af=new AddFirst();
+		af.addFirst(2);
+		af.addFirst(3);
+		af.addLast(6);
+		
+	}
+
+}

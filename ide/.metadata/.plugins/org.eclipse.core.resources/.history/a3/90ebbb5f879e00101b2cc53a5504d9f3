@@ -1,0 +1,62 @@
+package linkdelistDemo;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.*;
+public class InsertionLinkedList {
+	Scanner sc=new Scanner(System.in);
+	List<Employee> price=new LinkedList();
+	
+	public void setAllEmployee() {
+		Boolean addMore=true;
+		
+		System.out.println("Enter Name: ");
+		int name=sc.nextInt();
+		System.out.println("Enter rollNo: ");
+		int rollNo=sc.nextInt();
+		System.out.println("Enter City: ");
+		int city=sc.nextInt();
+		
+		Employee st=new Employee(rollNo ,name,city);
+		
+		System.out.println(st);
+		Employee.add(st);
+		
+		System.out.println("Press 1 for add more");
+		if(1!=sc.nextInt()) {
+			addMore=false;
+		}
+		
+		public void getAllEmployee() {
+			Iterator<Employee> itr=employee.iterator();
+			while(itr.hasNext()) {
+				Employee emp=oit.next();
+				System.out.println(emp.getCity());
+				System.out.println(emp.getName());
+				System.out.println(emp.getrollNo());
+				
+			}
+		}
+		
+	}
+	public static void main(String[] args) {
+		
+		//in linked list insertion of the elements is easy as compare to array and arraylist
+		// array is used when size of the data is fixed
+        //array list size of data is not fixed array list is used		
+		List<Integer> prices=new LinkedList();
+//		prices.add(123);
+//		prices.add(344);
+//		prices.add(234);
+//		prices.add(235);
+//		System.out.println(prices);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

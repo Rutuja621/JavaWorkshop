@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;java-websocket-chat/pom.xml.txt&apos; to &apos;pom.xml&apos;" description="Rename resource &apos;pom.xml.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="pom.xml.txt" name="pom.xml" stamp="1758818688726" updateReferences="true"/>
+</session>

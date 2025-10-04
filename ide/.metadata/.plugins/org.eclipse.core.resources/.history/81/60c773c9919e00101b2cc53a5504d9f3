@@ -1,0 +1,50 @@
+package ShoppingDemo;
+
+import linkdelistDemo.Student;
+
+import java.time.LocalDate;
+import java.util.*;
+public class ProductOperations {
+	Scanner sc=new Scanner(System.in);
+	Shopping sh=new Shopping();
+	public void setProducts() {
+		Boolean addMore =true;
+		while(addMore) {
+			System.out.println("ProductId :");
+			sh.setProductID(sc.nextInt());
+			System.out.println("enter name :");
+			sh.setName(sc.next());
+			System.out.println("enter price :");
+			sh.setPrice(sc.nextDouble());
+			System.out.println("enter stock :");
+			sh.setStock(sc.nextInt());
+			
+			System.out.println("enter registerdDate :");
+			sh.setRegisteredDate(sc.nextInt());
+			
+			System.out.println("Enter Description: ");
+			sh.setDescription(sc.next());
+			
+			System.out.println("Enter Registerd date: ");
+			sh.setRegisteredDate(sc.nextInt());
+					
+			System.out.println("Enter Expiry Date: ");
+			sh.setExpiryDate(sc.nextInt());
+					
+			System.out.println("Enter barcodeN: ");
+			sh.setBarcodeNo(sc.next());
+					
+			Shopping st =new Shopping(int productID, String name, double price, String description, int stock, LocalDate registeredDate,
+					LocalDate expiryDate, String barcodeNo);
+
+			System.out.println("********************************************");
+			System.out.println(st);
+			student.add(st);
+			System.out.println("press 1 for add more");
+			if(1!=sc.nextInt()) {
+				 addMore =false;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,46 @@
+package LinkedList;
+
+import java.security.DomainCombiner;
+
+public class AddFirst {
+	public class Node{
+		int data;
+		Node next;
+		
+		public Node(int data) {
+			this.data=data;
+			this.next=null;
+		}
+		
+	}
+	
+	public static Node head;
+	public static Node tail;
+	
+	
+	public void addFirst(int data) {
+		
+		//Step 1: Create new node
+		Node newNode=new Node(data);
+		if(head==null) {//if the list is empty then this point newNode is head it is also a tail node
+			head=tail=newNode;
+			return;
+			
+		}
+		//step 2: newNodes next points old head element
+		newNode.next=head;//linking of one node to another
+		
+		//step 3 : newNode points to head
+		head=newNode;
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		AddFirst af=new AddFirst();
+		af.addFirst(2);
+		af.addFirst(3);
+	}
+
+}

@@ -1,0 +1,88 @@
+package ExampleDemo;
+
+public class Student {
+	private String name;
+	private int rollNo;
+	private String city;
+	private String contact;
+	
+	
+
+
+	public String getName(String name) {
+		return this.setName(name);
+	}
+	
+	
+	public int getrollNo(int rollNo) {
+		return this.setRollNo(rollNo);
+	}
+	
+	public String getCity(String city) {
+		return this.setCity(city);
+	}
+	
+	public String getContact(String contact) {
+		return this.setContact(contact);
+	}
+	
+	private String setContact(String contact2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public void getData() {
+		System.out.println(setName("Rutuja"));
+		System.out.println(setrollNo(3));
+		System.out.println(setCity("Sangola"));
+	}
+	
+	public static void main(String[] args) {
+		Student st=new Student();
+	    st.getData();
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public String setName(String name) {
+		this.name = name;
+		return name;
+	}
+
+
+	public int getRollNo() {
+		return rollNo;
+	}
+
+
+	public int setRollNo(int rollNo) {
+		this.rollNo = rollNo;
+		return rollNo;
+	}
+
+
+	public String getCity() {
+		return city;
+	}
+
+
+	public String setCity(String city) {
+		this.city = city;
+		return city;
+	}
+	
+	public int setContact(int contact) {
+		this.contact = contact;
+		return contact;
+	}
+
+
+}
+
+
+}

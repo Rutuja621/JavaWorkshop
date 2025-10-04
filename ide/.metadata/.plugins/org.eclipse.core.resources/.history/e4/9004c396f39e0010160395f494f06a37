@@ -1,0 +1,11 @@
+package LinkedList;
+
+public class AddFirst {
+	
+	public void addFirst(int data) {
+		AddFirst af=new AddFirst();
+		af.addFirst(2);
+		
+	}
+
+}

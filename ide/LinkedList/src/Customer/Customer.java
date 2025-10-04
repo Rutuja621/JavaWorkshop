@@ -1,0 +1,61 @@
+package Customer;
+
+public class Customer {
+	
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public Customer(int cust_Id, String name, String address,int Quantity) {
+		super();
+		Cust_Id = cust_Id;
+		this.name = name;
+		this.address = address;
+		this.Quantity=Quantity;
+	}
+	
+	
+	private int Cust_Id;
+	private String name;
+	private String address;
+	private int Quantity;
+	
+	
+	public int getCust_Id() {
+		return Cust_Id;
+	}
+	public void setCust_Id(int cust_Id) {
+		Cust_Id = cust_Id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	public String getQuantity() {
+		return address;
+	}
+	public void setQuantity(String address) {
+		this.address = address;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Customer [Cust_Id=" + Cust_Id + ", name=" + name + ", address=" + address + ",Quantity"+"]";
+	}
+	
+	
+	
+
+}

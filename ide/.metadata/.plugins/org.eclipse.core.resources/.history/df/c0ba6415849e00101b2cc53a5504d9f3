@@ -1,0 +1,38 @@
+package linkdelistDemo;
+
+public class Employee {
+Employee(){
+		
+	}
+
+	
+	
+	private String setName(String name) {
+		// TODO Auto-generated method stub
+		return name;
+	}
+	
+	
+	private int setRollNo(int rollNo) {
+		// TODO Auto-generated method stub
+		return rollNo;
+	}
+
+
+
+
+	
+	private String setCity(String city) {
+		// TODO Auto-generated method stub
+		return city;
+	}
+
+
+
+	public void getData() {
+		System.out.println(setName("Rutuja"));
+		System.out.println(setRollNo(3));
+		System.out.println(setCity("Sangola"));
+	}
+
+}

@@ -1,0 +1,31 @@
+package Example3;
+
+public class User {
+	private String name;
+	
+	private int password;
+	private String city;
+	
+	
+
+	public void setName(String name) {
+		// TODO Auto-generated method stub
+		this.name=name;
+		
+	}
+
+	public void setRollNo(int rollNo) {
+		// TODO Auto-generated method stub
+		this.rollNo=rollNo;
+	}
+
+	public void setCity(String city) {
+		// TODO Auto-generated method stub
+		this.city=city;
+	}
+	
+	
+
+	
+
+}

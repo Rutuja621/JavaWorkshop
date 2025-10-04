@@ -1,0 +1,21 @@
+package Customer;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+public class CustomerOperations {
+	
+	public void setCustomers() {
+		Scanner sc=new Scanner(System.in);
+	    List<Customer> allProducts=new ArrayList<>();
+	    Customer sh=new Customer();
+	}
+	
+	public void getAllList() {
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package Customer;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+public class CustomerOperations {
+	Scanner sc=new Scanner(System.in);
+    List<Customer> allProducts=new ArrayList<>();
+    Customer sh=new Customer();
+    
+	public void setCustomers() {
+		
+			Boolean addMore =true;
+			while(addMore) {
+				System.out.println("ProductId :");
+				sh.setCust_Id(sc.nextInt());
+				System.out.println("enter name :");
+				sh.setName(sc.next());
+				System.out.println("enter price :");
+				sh.setAddress(sc.next());
+			}
+				
+	}
+	
+	public void getAllList() {
+		
+	}
+
+}
