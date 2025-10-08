@@ -1,8 +1,0 @@
-package linkdelistDemo;
-
-public class Test {
-	Employee emp=new Employee();
-	emp.setAllEmployee();
-	emp.getAllEmployee();
-
-}

@@ -6,13 +6,12 @@ import CustomerService.Services;
 
 public class Test {
 	public static void main(String[] args) {
-		CustomerOperations ch=new CustomerOperations();
-		ch.setCustomers();
-		ch.getAllList();
-		
-		Services sc=new Services();
-		sc.makeBill();
-		
+//		CustomerOperations ch=new CustomerOperations();
+//		ch.setCustomers();
+//		ch.getAllList();
+		Services.startApp();
 	}
+		
+	
 
 }

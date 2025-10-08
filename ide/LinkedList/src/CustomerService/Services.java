@@ -8,50 +8,55 @@ import Customer.Customer;
 import Customer.CustomerOperations;
 
 public class Services {
-	
-	Scanner sc=new Scanner(System.in);
-	public void makeBill() {
-		 System.out.println("Enter Customer Id to view details:");
-	        int custId = sc.nextInt();
-	        List<Customer> allCustomer = CustomerOperations.allCustomer;
-	        Iterator<Customer> itr = allCustomer.iterator();
-	        boolean foundCustomer = false;
-	        while (itr.hasNext()) {
-	            Customer customer = itr.next();
-	            if (customer.getCust_Id() == custId) {
-	                System.out.println(customer);
-	                foundCustomer = true;
+	 public static void main(String[] args) {
+	        startApp();
+	    }
+
+	    public static void startApp() {
+	        CustomerOperations co = new CustomerOperations();
+	        Scanner sc = new Scanner(System.in);
+	        int choice;
+
+	        do {
+	            System.out.println("\n--- Customer Operations Menu ---");
+	            System.out.println("Press 1 for Add new products");
+	            System.out.println("press 2 for Display all products");
+	            System.out.println("press 3 for Delete quantity for a customer");
+	            System.out.println("press 4 Calculate total price of all products");
+	            System.out.println("pree 5 for Exit");
+	            System.out.print("Enter your choice: ");
+	            
+	            if (sc.hasNextInt()) {
+	                choice = sc.nextInt();
+	                sc.nextLine(); // Consume the newline
+	            } else {
+	                System.out.println("Invalid input. Please enter a number.");
+	                sc.nextLine(); // Consume the invalid input
+	                choice = 0; // Set choice to an invalid number to continue the loop
 	            }
-	        }
-	        if (!foundCustomer) {
-	            System.out.println("Not found");
-	        }
+
+	            switch (choice) {
+	                case 1:
+	                    co.setCustomers();
+	                    break;
+	                case 2:
+	                    co.getAllList();
+	                    break;
+	                case 3:
+	                    co.deleteQuantity();
+	                    break;
+	                case 4:
+	                    co.calculateTotalPriceOfAllProducts();
+	                    break;
+	                case 5:
+	                    System.out.println("Exiting program.");
+	                    break;
+	                default:
+	                    System.out.println("Invalid choice. Please try again.");
+	            }
+	        } while (choice != 5);
+
+	        sc.close();
+	    }
 	}
-
-	    public void calculateTotalQuantityByPrice() {
-	        System.out.println("Enter Customer Id:");
-	        int custId = sc.nextInt();
-	        System.out.println("Enter the Price (Product Identifier) to sum quantities for:");
-	        String priceIdentifier = sc.next(); // Assuming 'price' is stored as a String in 'address'
-
-	        List<Customer> allCustomer = CustomerOperations.allCustomer;
-	        int totalQuantity = 0;
-	        boolean customerFound = false;
-
-	        for (Customer customer : allCustomer) {
-	            if (customer.getCust_Id() == custId) {
-	                customerFound = true;
-	                // Assuming 'address' is used to store the 'price' or product identifier
-	                // And 'quantity' is stored as a String, so it needs parsing
-	                if (customer.getAddress().equals(priceIdentifier)) {
-	                    try {
-	                        totalQuantity += Integer.parseInt(customer.getQuantity());
-	                    } catch (NumberFormatException e) {
-	                        System.err.println("Invalid quantity format for customer " + customer.getCust_Id() + ": " + customer.getQuantity());
-	                    }
-	                }
-	            }
-	
-	
-	        }
 

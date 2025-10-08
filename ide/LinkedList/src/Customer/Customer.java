@@ -8,12 +8,14 @@ public class Customer {
 	}
 	
 	
-	public Customer(int cust_Id, String name, String address,int Quantity) {
+	public Customer(int cust_Id, String name, String address,int Quantity,double price) {
 		super();
-		Cust_Id = cust_Id;
+		this.Cust_Id = cust_Id;
 		this.name = name;
 		this.address = address;
 		this.Quantity=Quantity;
+		this.price = price;
+		
 	}
 	
 	
@@ -21,6 +23,7 @@ public class Customer {
 	private String name;
 	private String address;
 	private int Quantity;
+	private double price;
 	
 	
 	public int getCust_Id() {
@@ -42,17 +45,27 @@ public class Customer {
 		this.address = address;
 	}
 	
-	public String getQuantity() {
-		return address;
+	public int getQuantity() {
+		return Quantity;
 	}
-	public void setQuantity(String address) {
-		this.address = address;
+	public void setQuantity(int quantity) {
+		this.Quantity = quantity;
 	}
 	
+	public double getPrice() 
+	{ return price; } // New getter for price
+    public void setPrice(double price)
+    { this.price = price; } // New setter for price
+	
+    
+ // Calculate total price for this customer
+    public double getTotalPrice() {
+        return this.price * this.Quantity;
+    }
 	
 	@Override
 	public String toString() {
-		return "Customer [Cust_Id=" + Cust_Id + ", name=" + name + ", address=" + address + ",Quantity"+"]";
+		return "Customer [Cust_Id=" + Cust_Id + ", name=" + name + ", address=" + address + ",Quantity= " +Quantity+ ", Price=" + price + ", Total=" + getTotalPrice() + "]";
 	}
 	
 	
